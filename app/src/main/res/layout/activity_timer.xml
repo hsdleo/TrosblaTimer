@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_default"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="00:30"
+        android:fontFamily="@font/lato"
+        android:shadowColor="@color/text_shadow_black"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="2"
+        android:textColor="@color/white"
+        android:textSize="100sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Level 1"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@color/green_paused"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"/>
+
+    <TextView
+        android:id="@+id/tv_blind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="25 / 50"
+        android:fontFamily="@font/lato"
+        android:shadowColor="@color/text_shadow_black"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="2"
+        android:textColor="@color/white"
+        android:textSize="75sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_next_blind"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_next_blind"
+        app:layout_constraintRight_toRightOf="@+id/tv_next_blind"/>
+
+    <TextView
+        android:id="@+id/tv_next_blind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="16dp"
+        android:text="50 / 100"
+        android:fontFamily="@font/lato"
+        android:shadowColor="@color/text_shadow_black"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="2"
+        android:textColor="@color/white"
+        android:textSize="30sp"/>
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabtimer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_android_black_add_24"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabtimer2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_android_black_add_24"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
